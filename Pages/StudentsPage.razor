@@ -17,13 +17,19 @@
         </tr>
     </thead>
     <tbody> 
-        @foreach(var Stud in Student){
+        @foreach(var Stud in Student)
+        {
             <tr>
                 <td>@Stud.studentID</td>
                 <td>@Stud.lastName</td>
                 <td>@Stud.firstName</td>
                 <td>@Stud.enrollmentDate</td>
-                <td><a href="@($"detailStudents/{Stud.studentID}")" class="btn btn-success">Details</a> | <a href="@($"enrollStudents/{Stud.studentID}")" class="btn btn-secondary">Enroll</a> | <a href="@($"editStudents/{Stud.studentID}")" class="btn btn-warning">Edit</a> | <a href="@($"deleteStudents/{Stud.studentID}")" class="btn btn-danger">Delete</a></td>
+                <td>
+                <a href="@($"detailStudents/{Stud.studentID}")" class="btn btn-success">Details</a> | 
+                <a href="@($"enrollStudents/{Stud.studentID}")" class="btn btn-secondary">Enroll</a> | 
+                <a href="@($"editStudents/{Stud.studentID}")" class="btn btn-warning">Edit</a> |
+                <a href="@($"deleteStudents/{Stud.studentID}")" class="btn btn-danger">Delete</a>
+                </td>
             </tr>
         }
     </tbody>

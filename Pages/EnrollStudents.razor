@@ -3,18 +3,21 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <td>Students ID</td>
+            <th>Students ID</th>
             <th>Course ID</th>
             <th>Tittle</th>
             <th>Credits</th>
         </tr>
     </thead>
     <tbody> 
+        @foreach(var enrl in enrollment)
+        {
             <tr>
-                <td>@enrollment.studentID</td>
-                <td>@enrollment.courseID</td>
-                <td>@enrollment.title</td>
-                <td>@enrollment.credits</td>
+                <td>@enrl.studentID</td>
+                <td>@enrl.courseID</td>
+                <td>@enrl.title</td>
+                <td>@enrl.credits</td>
             </tr>
+            }
     </tbody>
 </table>

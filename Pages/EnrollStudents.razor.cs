@@ -14,12 +14,12 @@ namespace UAS.Pages
         public string id { get; set; }
         [Inject]
         public IEnrollmentServices EnrollmentServices {get;set;}
-        public Enrollment enrollment { get; set; } = new Enrollment();
+        public List<Enrollment> enrollment { get; set; } = new List<Enrollment>();
         protected override async Task OnInitializedAsync()
         {
             id = id ?? "1";
-            enrollment = await EnrollmentServices.GetById(int.Parse(id));
-            //Student = (await StudentService.GetAll()).ToList();
+            //enrollment = await EnrollmentServices.GetById(int.Parse(id));
+            enrollment = (await EnrollmentServices.GetAll(int.Parse(id))).ToList();
         }
     }
 }

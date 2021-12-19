@@ -6,7 +6,7 @@ namespace UAS.Services
 {
     public interface IEnrollmentServices
     {
-        Task<IEnumerable<Enrollment>> GetAll();
-        Task<Enrollment> GetById(int id);
+        Task<IEnumerable<Enrollment>> GetAll(int id);
+        Task <Enrollment> GetById(int id);
     }
 }

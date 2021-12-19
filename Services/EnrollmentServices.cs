@@ -13,15 +13,15 @@ namespace UAS.Services
         {
               _httpClient = httpClient;
         }
-        public async Task<IEnumerable<Enrollment>> GetAll()
+        public async Task<IEnumerable<Enrollment>> GetAll(int id)
         {
-            var results = await _httpClient.GetFromJsonAsync<IEnumerable<Enrollment>>("/enrollment");
+            var results = await _httpClient.GetFromJsonAsync<IEnumerable<Enrollment>>($"/enrollment/{id}");
             return results;
         }
         public async Task<Enrollment> GetById(int id)
         {
-            var result = await _httpClient.GetFromJsonAsync<Enrollment>($"/enrollment/{id}");
-            return result;
+           var result = await _httpClient.GetFromJsonAsync<Enrollment>($"/enrollment/{id}");
+           return result;
         }
     }
 }
