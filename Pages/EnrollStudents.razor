@@ -1,0 +1,20 @@
+@page "/enrollStudents/{id}"
+<h3>Daftar EnrollmentStudents</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Students ID</td>
+            <th>Course ID</th>
+            <th>Tittle</th>
+            <th>Credits</th>
+        </tr>
+    </thead>
+    <tbody> 
+            <tr>
+                <td>@enrollment.studentID</td>
+                <td>@enrollment.courseID</td>
+                <td>@enrollment.title</td>
+                <td>@enrollment.credits</td>
+            </tr>
+    </tbody>
+</table>

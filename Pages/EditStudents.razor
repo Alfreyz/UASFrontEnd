@@ -1,0 +1,40 @@
+@page "/editStudents/{id}"
+
+<EditForm Model="@Student" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator/>
+    <h3>Edit Students</h3>
+    <hr/>
+    <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">
+            Students ID
+        </label>
+        <div class="col-sm-10">
+            <InputText id="studentsID" class="form-control" placeholder="NIM" @bind-Value="Student.studentID"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">
+            last Name
+        </label>
+        <div class="col-sm-10">
+            <InputText id="lastName" class="form-control" placeholder="Last Name" @bind-Value="Student.lastName"/>
+        </div>
+    </div>
+        <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">
+            first Name
+        </label>
+        <div class="col-sm-10">
+            <InputText id="firstName" class="form-control" placeholder="First Name" @bind-Value="Student.firstName"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="enrollmentdate" class="col-sm-2 col-form-label">
+            enrollment Date
+        </label>
+        <div class="col-sm-10">
+            <InputDate class="form-control"  @bind-Value="Student.enrollmentDate"/>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</EditForm>
